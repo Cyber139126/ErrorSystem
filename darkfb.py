@@ -58,7 +58,7 @@ def tik():
 back = 0
 threads = []
 berhasil = []
-cekpoint = []
+berhasil = []
 oks = []
 id = []
 listgrup = []
@@ -138,7 +138,7 @@ def login():
 			except requests.exceptions.ConnectionError:
 				print"\n\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
 				keluar()
-		if 'checkpoint' in url:
+		if 'berhasil' in url:
 			print("\n\033[1;96m[!] \x1b[1;91mSepertinya akun anda kena checkpoint")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
@@ -444,7 +444,7 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print '\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;92mSelesai \033[1;97m....'
-	print"\033[1;96m[+] \033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
+	print"\033[1;96m[+] \033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(berhasil))
 	print("\033[1;96m[+] \033[1;92mCP File tersimpan \033[1;91m: \033[1;97mout/super_cp.txt")
 	raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
 	super()
